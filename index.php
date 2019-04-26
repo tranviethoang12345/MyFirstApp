@@ -2,7 +2,7 @@
 <html>
 <body>
 
-<h1>My Max page <3</h1>
+<h1>My Max Page <3</h1>
 
 <?php 
 $sql = "SELECT id, name FROM label";
