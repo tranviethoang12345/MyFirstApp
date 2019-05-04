@@ -36,9 +36,12 @@ $stmt = $pdo->prepare($sql);
 $stmt->setFetchMode(PDO::FETCH_ASSOC);
 $stmt->execute();
 $resultSet = $stmt->fetchAll();
+
+echo "<ul>";
 foreach ($resultSet as $row) {
-	echo $row['name'] . '\n';
+  echo "<li>" . $row['name'] . "</li>";
 }
+  echo "</ul>";
 ?>
 </body>
 </html>
