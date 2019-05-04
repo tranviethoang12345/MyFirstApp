@@ -14,24 +14,29 @@
 </html>
 
 <?php  
-	if (empty(getenv("DATABASE_URL"))){
-    $pdo = new PDO('pgsql:host=localhost;port=5432; dbname=myDB', 'postgres', 'Viethoang_t18');
-	}  else {
-	   $db = parse_url(getenv("DATABASE_URL"));
-	   $pdo = new PDO("pgsql:" . sprintf(
-	        "host=%s;port=%s;user=%s;password=%s;dbname=%s",
-	        $db["host"],
-	        $db["port"],
-	        $db["user"],
-	        $db["pass"],
-	        ltrim($db["path"], "/")
-	   ));
+	if (isset($_POST["id"]) && isset($_POST["name"]))
+	{
+		$id = $_POST["id"];
+		$name = $_POST["name"];
+		
+		if (empty(getenv("DATABASE_URL"))){
+	    $pdo = new PDO('pgsql:host=localhost;port=5432; dbname=myDB', 'postgres', 'Viethoang_t18');
+		}  else {
+		   $db = parse_url(getenv("DATABASE_URL"));
+		   $pdo = new PDO("pgsql:" . sprintf(
+		        "host=%s;port=%s;user=%s;password=%s;dbname=%s",
+		        $db["host"],
+		        $db["port"],
+		        $db["user"],
+		        $db["pass"],
+		        ltrim($db["path"], "/")
+		   ));
 	}  
 
 		$stmt = $pdo->prepare($sql);
 
 		$data = [
-			'id' => $id
+			'id' => $id,
 			'name' => $name
 		];
 		$sql = "INSERT INTO label (id, name) VALUES(:id, :name)";
