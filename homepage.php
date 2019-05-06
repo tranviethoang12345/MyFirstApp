@@ -36,8 +36,8 @@
 					<!--/.First row-->
               		<!--Second row-->
 			        <?php
-			          	require_once('./dbconnector.php');
-			            $sql = "SELECT * FROM product ";
+			        include 'dbconnector.php';
+			            $sql = "SELECT proId, catId, proImage, proName, proDes,  proPrice FROM product ";
 			            $result = pg_query($connection,$sql);
 			            if (pg_num_rows($result) > 0) {
 			            // output data of each row
@@ -58,7 +58,7 @@
 				                <!--Card image-->
 				                <div style="height: 18em">
 				                  	<a href="detailProduct.php?proId=<?= $proId; ?>">
-				                    	<img src="<?=$proImage ?>" class="card-img-top" height="280px" width="280px"  alt="">
+				                    	<img src="<?=$proImage; ?>" class="card-img-top" height="280px" width="280px"  alt="">
 				                  	</a>
 				                </div>
 				                <!--/.Card image-->

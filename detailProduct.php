@@ -28,14 +28,26 @@
 					<!--First row-->
 					<h2 class="h2-responsive">Details<h2>
 		          	<?php 
-		            	require_once('./dbconnector.php');
-		            	$conn = new DBConnector();
-		            	$sql = "SELECT * FROM product WHERE proId =" . $_GET['proId'];
-		            	$rows = $conn -> runQuery($sql);
+
+
+ 						include 'dbconnector.php';
+ 						$proId =$_GET['proId'];
+			            $sql = "SELECT proId, catId, proImage, proName, proDes,  proPrice FROM product WHERE proId = '$proId'";
+			            $result = pg_query($connection,$sql);
+			            if (pg_num_rows($result) > 0) {
+			            // output data of each row
+			            while($key = pg_fetch_assoc($result)) {
+			            	$proId = $key['proId'];
+			            	$catId = $key['catId'];
+			              	$proImage = $key['proImage'];
+			              	$proName = $key['proName'];
+			              	$proDes = $key['proDes'];
+			              	$proPrice = $key['proPrice'];
+
+		            	
 		           	?>
 			          
 			        <div class="row">
-			        <?php foreach ($rows as $key) { ?>
 			            <div class="col-lg-12">
 			            <!--Card-->
 			            <div class="card">
@@ -63,7 +75,7 @@
              		 	</div>
               			<!--/.Card-->
             		</div>
-            		<?php } ?>
+            		<?php }} ?>
           		</div>
           		<!--/row-->
 			</div>
