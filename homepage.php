@@ -37,7 +37,7 @@
               		<!--Second row-->
 			        <?php
 			          	require_once('./dbconnector.php');
-			            $sql = "SELECT * FROM product where catId = 5";
+			            $sql = "SELECT * FROM product ";
 			            $result = pg_query($connection,$sql);
 			            if (pg_num_rows($result) > 0) {
 			            // output data of each row
