@@ -34,12 +34,11 @@
 			
 
 					<!--/.First row-->
-					<!-- $sql = "SELECT * FROM product where catId = '5' "; -->
               		<!--Second row-->
 			        <?php 
 			            require_once('./dbconnector.php');
 			            $conn = new DBConnector();
-			            $sql = "SELECT * FROM product LIMIT 9";
+			            $sql = "SELECT * FROM product where catId = 5";
 			            $rows = $conn -> runQuery($sql);
 			        ?>
 			        <div class="row">
