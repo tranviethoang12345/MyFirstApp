@@ -42,16 +42,16 @@
 			            $result = pg_query($connection,$sql);
 			            if (pg_num_rows($result) > 0) {
 			            // output data of each row
-			            while($rows = pg_fetch_assoc($result)) {
-			            	$proid = $rows['proid'];
-			              	$proimage = $rows['proimage'];
-			              	$proname = $rows['proname'];
-			              	$prodes = $rows['prodes'];
-			              	$proprice = $rows['proprice'];
+			            while($key = pg_fetch_assoc($result)) {
+			            	$proid = $key['proid'];
+			              	$proimage = $key['proimage'];
+			              	$proname = $key['proname'];
+			              	$prodes = $key['prodes'];
+			              	$proprice = $key['proprice'];
 		          	?>
 			        <div class="row">
 			            <!--columnn-->
-			            <?php foreach ($rows as $key) { ?>
+			           
 		             	<div class="col-lg-4">
 			              	<!--Card-->
 			              	<div class="card" style="width: 15rem; height: 34em; margin-bottom: 0.5em">
@@ -78,9 +78,10 @@
 			              	</div>
 			              	<!--/.Card-->
 		            	</div>
-			        	<?php } ?>
+			        	
 			        	<!--/column-->
 			        </div>
+			        <?php }} ?>
 			        <!--/.Second row-->
 		        </div>
 			</div>
