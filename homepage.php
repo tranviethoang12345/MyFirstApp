@@ -12,14 +12,14 @@
 	<link rel="stylesheet" href="statics/main.js">
 </head>
 <body>
-	
+	<?php require_once("header.php") ?>
 
 	<main>
 	<!-- Main Layout -->
 	<div class="container">
 		<div class="row">
 			<!--Sidebar-->
-	       
+	       <?php require_once("sidebar.php") ?>
 	        <!--/.Sidebar-->
 		</div>
 
@@ -48,40 +48,25 @@
 			              	$prodes = $key['prodes'];
 			              	$proprice = $key['proprice'];
 		          	?>
-			        <!-- <div class="row">
-			            columnn
-			          
-			        		             	<div class="col-lg-4">
-			              	Card
-			              	<div class="card" style="width: 15rem; height: 34em; margin-bottom: 0.5em">
-			        				                Card image
-			        				                <div style="height: 18em">
-			        				                  	<a href="detailProduct.php?proid=<?= $proid; ?>">
-			        				                    	<img src="<?=$proimage; ?>" class="card-img-top" height="280px" width="280px"  alt="">
-			        				                  	</a>
-			        				                </div>
-			        				                /.Card image
-			        
-			        				                Card content
-			        				                <div class="card-body">
-			        				                  	Title
-			        				                  	<h4 class="card-title" style="height: 2.2em"><?php echo $key['proname'] ?></h4>
-			        				                  	Text
-			        				                  	<p class="card-text" style="height: 3.3em"><?php echo $key['prodes'] ?></p>
-			        				                </div>
+			         <div class="row">
+		        		<div class="col-lg-4">
+		              		<div class="card" style="width: 15rem; height: 34em; margin-bottom: 0.5em">
+				                <div style="height: 18em">
+				                  	<a href="detailProduct.php?proid=<?= $proid; ?>">
+				                    	<img src="<?=$proimage; ?>" class="card-img-top" height="280px" width="280px"  alt="">
+				                  	</a>
+				                </div>			        
+				                <div class="card-body">
+				                  	<h4 class="card-title" style="height: 2.2em"><?php echo $key['proname'] ?></h4>
+				                  	<p class="card-text" style="height: 3.3em"><?php echo $key['prodes'] ?></p>
+				                </div>
 			        				                
-			        				                <div class="card-body">
-			        				                  	<a href="#" class="btn btn-primary card-link">Buy now for <strong>$<?php echo $key['proprice'] ?></strong></a>
+				                <div class="card-body">
+				                  	<a href="#" class="btn btn-primary card-link">Buy now for <strong>$<?php echo $key['proprice'] ?></strong></a>
 			               	 	</div>
-			                	/.Card content
 			              	</div>
-			              	/.Card
-			        		            	</div>
-			        	
-			        	/column
-			        </div> -->
-<img src="<?=$proimage; ?>">;
-
+		        		</div>
+			        </div>
 
 			        <?php }} ?>
 
