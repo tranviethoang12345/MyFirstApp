@@ -49,7 +49,7 @@
 			              	$prodes = $key['prodes'];
 			              	$proprice = $key['proprice'];
 		          	?>
-			        <div class="row">
+			       
 			            <!--columnn-->
 			            
 		             	<div class="col-lg-4">
@@ -80,7 +80,7 @@
 		            	</div>
 			        	
 			        	<!--/column-->
-			        </div>
+			      
 			        <?php }} ?>
 			        <!--/.Second row-->
 		        </div>
