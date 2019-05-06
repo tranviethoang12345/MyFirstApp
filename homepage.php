@@ -35,29 +35,23 @@
 
 					<!--/.First row-->
               		<!--Second row-->
-			        <?php 
-			            require_once('./dbconnector.php');
-			            $conn = new DBConnector();
-			            $sql = "SELECT * FROM product where catId = 5";
-			            $rows = $conn -> runQuery($sql);
-			        ?>
 			        <?php
-		          require_once('./dbconnector.php');
-		            $sql = "SELECT * FROM product where catId = 5";
-		            $result = pg_query($connection,$sql);
-		            if (pg_num_rows($result) > 0) {
-		            // output data of each row
-		            while($row = pg_fetch_assoc($result)) {
-		            	$catId = $row['catId'];
-		              	$proImage = $row['proImage'];
-		              	$proName = $row['proName'];
-		              	$proDes = $row['proDes'];
-		              	$proPrice = $row['proPrice'];
+			          	require_once('./dbconnector.php');
+			            $sql = "SELECT * FROM product where catId = 5";
+			            $result = pg_query($connection,$sql);
+			            if (pg_num_rows($result) > 0) {
+			            // output data of each row
+			            while($key = pg_fetch_assoc($result)) {
+			            	$catId = $key['catId'];
+			              	$proImage = $key['proImage'];
+			              	$proName = $key['proName'];
+			              	$proDes = $key['proDes'];
+			              	$proPrice = $key['proPrice'];
 		         
 		          	?>
 			        <div class="row">
 			            <!--columnn-->
-			            <?php foreach ($rows as $key) { ?>
+			          
 		             	<div class="col-lg-4">
 			              	<!--Card-->
 			              	<div class="card" style="width: 15rem; height: 34em; margin-bottom: 0.5em">
@@ -84,7 +78,7 @@
 			              	</div>
 			              	<!--/.Card-->
 		            	</div>
-			        	<?php } ?>
+			        	<?php }} ?>
 			        	<!--/column-->
 			        </div>
 			        <!--/.Second row-->
