@@ -42,6 +42,7 @@
 			            if (pg_num_rows($result) > 0) {
 			            // output data of each row
 			            while($key = pg_fetch_assoc($result)) {
+			            	$proId = $key['proId'];
 			            	$catId = $key['catId'];
 			              	$proImage = $key['proImage'];
 			              	$proName = $key['proName'];
@@ -56,8 +57,8 @@
 			              	<div class="card" style="width: 15rem; height: 34em; margin-bottom: 0.5em">
 				                <!--Card image-->
 				                <div style="height: 18em">
-				                  	<a href="detailProduct.php?proId=<?php echo $key['proId'] ?>">
-				                    	<img src="<?php echo $key['proImage'] ?>" class="card-img-top" height="280px" width="280px"  alt="">
+				                  	<a href="detailProduct.php?proId=<?= $proId; ?>">
+				                    	<img src="<?=$proImage ?>" class="card-img-top" height="280px" width="280px"  alt="">
 				                  	</a>
 				                </div>
 				                <!--/.Card image-->
