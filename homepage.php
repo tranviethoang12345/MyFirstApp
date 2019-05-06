@@ -54,7 +54,7 @@
 		              	$proDes = $row['proDes'];
 		              	$proPrice = $row['proPrice'];
 		         
-		          ?>
+		          	?>
 			        <div class="row">
 			            <!--columnn-->
 			            <?php foreach ($rows as $key) { ?>
