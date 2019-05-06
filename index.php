@@ -51,7 +51,7 @@
 		          	?>
 			        <div class="row">
 			            <!--columnn-->
-			           
+			            
 		             	<div class="col-lg-4">
 			              	<!--Card-->
 			              	<div class="card" style="width: 15rem; height: 34em; margin-bottom: 0.5em">
@@ -78,10 +78,10 @@
 			              	</div>
 			              	<!--/.Card-->
 		            	</div>
-			        	 <?php }} ?>
+			        	
 			        	<!--/column-->
 			        </div>
-			       
+			        <?php }} ?>
 			        <!--/.Second row-->
 		        </div>
 			</div>
