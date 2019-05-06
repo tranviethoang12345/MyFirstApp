@@ -19,7 +19,7 @@
 	<div class="container">
 		<div class="row">
 			<!--Sidebar-->
-	        <!-- <?php require_once('sidebar.php') ?> -->
+	       
 	        <!--/.Sidebar-->
 		</div>
 
@@ -37,17 +37,16 @@
               		<!--Second row-->
 			        <?php
 			        include 'dbconnector.php';
-			            $sql = "SELECT proId, catId, proImage, proName, proDes,  proPrice FROM product ";
+			            $sql = "SELECT proid, proimage, proname, prodes,  proprice FROM product ";
 			            $result = pg_query($connection,$sql);
 			            if (pg_num_rows($result) > 0) {
 			            // output data of each row
 			            while($key = pg_fetch_assoc($result)) {
-			            	$proId = $key['proId'];
-			            	$catId = $key['catId'];
-			              	$proImage = $key['proImage'];
-			              	$proName = $key['proName'];
-			              	$proDes = $key['proDes'];
-			              	$proPrice = $key['proPrice'];
+			            	$proid = $key['proid'];
+			              	$proimage = $key['proimage'];
+			              	$proname = $key['proname'];
+			              	$prodes = $key['prodes'];
+			              	$proprice = $key['proprice'];
 		          	?>
 			        <div class="row">
 			            <!--columnn-->
@@ -57,8 +56,8 @@
 			              	<div class="card" style="width: 15rem; height: 34em; margin-bottom: 0.5em">
 				                <!--Card image-->
 				                <div style="height: 18em">
-				                  	<a href="detailProduct.php?proId=<?= $proId; ?>">
-				                    	<img src="<?=$proImage; ?>" class="card-img-top" height="280px" width="280px"  alt="">
+				                  	<a href="detailProduct.php?proid=<?= $proid; ?>">
+				                    	<img src="<?=$proimage; ?>" class="card-img-top" height="280px" width="280px"  alt="">
 				                  	</a>
 				                </div>
 				                <!--/.Card image-->
@@ -66,13 +65,13 @@
 				                <!--Card content-->
 				                <div class="card-body">
 				                  	<!--Title-->
-				                  	<h4 class="card-title" style="height: 2.2em"><?php echo $key['proName'] ?></h4>
+				                  	<h4 class="card-title" style="height: 2.2em"><?php echo $key['proname'] ?></h4>
 				                  	<!--Text-->
-				                  	<p class="card-text" style="height: 3.3em"><?php echo $key['proDes'] ?></p>
+				                  	<p class="card-text" style="height: 3.3em"><?php echo $key['prodes'] ?></p>
 				                </div>
 				                
 				                <div class="card-body">
-				                  	<a href="#" class="btn btn-primary card-link">Buy now for <strong>$<?php echo $key['proPrice'] ?></strong></a>
+				                  	<a href="#" class="btn btn-primary card-link">Buy now for <strong>$<?php echo $key['proprice'] ?></strong></a>
 			               	 	</div>
 			                	<!--/.Card content-->
 			              	</div>
