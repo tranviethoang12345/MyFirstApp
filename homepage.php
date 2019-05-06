@@ -77,9 +77,12 @@
 			              	</div>
 			              	<!--/.Card-->
 		            	</div>
-			        	<?php }} ?>
+			        	
 			        	<!--/column-->
 			        </div>
+
+			        <?php }} ?>
+			        
 			        <!--/.Second row-->
 		        </div>
 			</div>
