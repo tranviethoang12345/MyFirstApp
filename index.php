@@ -49,10 +49,10 @@
 			              	$prodes = $key['prodes'];
 			              	$proprice = $key['proprice'];
 		          	?>
-			       
+			        <div class="row">
 			            <!--columnn-->
 			            
-		             	
+		             	<div class="col-lg-4">
 			              	<!--Card-->
 			              	<div class="card" style="width: 15rem; height: 34em; margin-bottom: 0.5em">
 				                <!--Card image-->
@@ -77,11 +77,10 @@
 			                	<!--/.Card content-->
 			              	</div>
 			              	<!--/.Card-->
-		            	
-			        	
+		            	</div>
+			        	<?php }} ?>
 			        	<!--/column-->
-			      
-			        <?php }} ?>
+			        </div>
 			        <!--/.Second row-->
 		        </div>
 			</div>
