@@ -3,14 +3,17 @@
         <br>
         <?php 
             require_once('./dbconnector.php');
-            $conn = new DBConnector();
             $sql = "SELECT * FROM category";
-            $rows = $conn ->runQuery($sql);
-            ?>
+            $result = pg_query($connection,$sql);
+            if (pg_num_rows($result) > 0) {
+            // output data of each row
+            while($key = pg_fetch_assoc($result)) {
+                $catId = $key['catId'];
+                $catName = $key['catName'];
+        ?>
         <div class="list-group">
-            <?php foreach ($rows as $key) { ?>
                 <a href="catName.php?catId=<?= $key['catId']?>" class="list-group-item bg-secondary text-white"><?php echo $key['catName'] ?></a>
-            <?php } ?>
+            <?php }} ?>
         </div>
 
         <div style="padding-top: 3rem">

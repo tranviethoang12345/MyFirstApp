@@ -47,7 +47,6 @@
 			              	$proName = $key['proName'];
 			              	$proDes = $key['proDes'];
 			              	$proPrice = $key['proPrice'];
-		         
 		          	?>
 			        <div class="row">
 			            <!--columnn-->

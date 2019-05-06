@@ -37,10 +37,6 @@
 		        </ul>
 	    	</div>
 
-        <!-- <form class="form-inline waves-effect waves-light" action="search.php" method="GET">
-          	<input class="form-control" type="text" placeholder="Search" name="keyword" pattern="^[a-zA-Z ]+$">
-        </form> -->
-
         <form class="form-inline my-2 my-lg-0" action="search.php" method="GET">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="keyword" pattern="^[a-zA-Z ]+$">
             <button class="btn btn-outline-success my-2 my-sm-0" style="margin-right: 10px " type="submit">Search</button>
