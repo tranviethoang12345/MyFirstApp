@@ -19,7 +19,7 @@
 	<div class="container">
 		<div class="row">
 			<!--Sidebar-->
-	        <?php require_once('sidebar.php') ?>
+	        <!-- <?php require_once('sidebar.php') ?> -->
 	        <!--/.Sidebar-->
 		</div>
 
