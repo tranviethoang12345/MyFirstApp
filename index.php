@@ -23,12 +23,10 @@
 				<div class="col-lg-12">
 					<!--First row-->
 					<h2 class="h2-responsive">What's new?</h2>
-			
-
-					<!--/.First row-->
-					<!-- $sql = "SELECT * FROM product where catId = '5' "; -->
-              		<!--Second row-->
-			         <?php
+			         
+			        <div class="row">
+			            <!--columnn-->
+			            <?php
 			        include 'dbconnector.php';
 			            $sql = "SELECT * FROM product ";
 			            $result = pg_query($connection,$sql);
@@ -41,9 +39,6 @@
 			              	$prodes = $key['prodes'];
 			              	$proprice = $key['proprice'];
 		          	?>
-			        <div class="row">
-			            <!--columnn-->
-			            
 		             	<div class="col-lg-4">
 			              	<!--Card-->
 			              	<div class="card" style="width: 15rem; height: 34em; margin-bottom: 0.5em">
