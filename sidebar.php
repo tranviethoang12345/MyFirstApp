@@ -12,7 +12,7 @@
                 $catName = $key['catName'];
         ?>
         <div class="list-group">
-                <a href="catName.php?catId=<?= $key['catId']?>" class="list-group-item bg-secondary text-white"><?php echo $key['catName'] ?></a>
+                <a href="catName.php?catId=<?= $key['catid']?>" class="list-group-item bg-secondary text-white"><?php echo $key['catname'] ?></a>
             <?php }} ?>
         </div>
 
