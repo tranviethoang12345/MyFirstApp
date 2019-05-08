@@ -28,7 +28,7 @@
 
             
 	        <div class="col-lg-8">
-
+				<div class="col-lg-12">
 					<!--First row-->
 					<h2 class="h2-responsive">What's new?</h2>
 			
@@ -49,7 +49,7 @@
 			              	$proimage = $key['proimage'];
 			              	$proname = $key['proname'];
 			              	$prodes = $key['prodes'];
-			              	$proprice = $key['proprice']; ?>
+			              	$proprice = $key['proprice']; { ?>
 		        		<div class="col-lg-4">
 		              		<div class="card" style="width: 15rem; height: 34em; margin-bottom: 0.5em">
 				                <div style="height: 18em">
@@ -67,9 +67,9 @@
 			               	 	</div>
 			              	</div>
 		        		</div>
-			        
-			        <?php }} ?>
+			        </div>
 
+			        <?php }} ?>
 
 			        <!--/.Second row-->
 		        </div>
