@@ -39,17 +39,17 @@
 			        include 'dbconnector.php';
 			            $sql = "SELECT proid, proimage, proname, prodes,  proprice FROM product ";
 			            $result = pg_query($connection,$sql);
-			            if (pg_num_rows($result) > 0) {
+			            
+		          	?>
+			         <div class="row">
+			         	<?phpif (pg_num_rows($result) > 0) {
 			            // output data of each row
 			            while($key = pg_fetch_assoc($result)) {
 			            	$proid = $key['proid'];
 			              	$proimage = $key['proimage'];
 			              	$proname = $key['proname'];
 			              	$prodes = $key['prodes'];
-			              	$proprice = $key['proprice'];
-		          	?>
-			         <div class="row">
-			         	<?php foreach ($key) { ?>
+			              	$proprice = $key['proprice']; ?>
 		        		<div class="col-lg-4">
 		              		<div class="card" style="width: 15rem; height: 34em; margin-bottom: 0.5em">
 				                <div style="height: 18em">
