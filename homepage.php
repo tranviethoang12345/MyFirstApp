@@ -18,16 +18,6 @@
 	<!-- Main Layout -->
 	<div class="container">
 		<div class="row">
-			<!--Sidebar-->
-	       <?php require_once("sidebar.php") ?>
-	        <!--/.Sidebar-->
-		</div>
-
-			<!--Main column-->
-			<!--First row-->
-
-            
-	        <div class="col-lg-8">
 				<div class="col-lg-12">
 					<!--First row-->
 					<h2 class="h2-responsive">What's new?</h2>
@@ -37,7 +27,7 @@
               		<!--Second row-->
 			        <?php
 			        include 'dbconnector.php';
-			            $sql = "SELECT proid, proimage, proname, prodes,  proprice FROM product ";
+			            $sql = "SELECT * FROM product ";
 			            $result = pg_query($connection,$sql);
 			            if (pg_num_rows($result) > 0) {
 			            // output data of each row
