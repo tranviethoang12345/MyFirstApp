@@ -42,7 +42,7 @@
 			              	<div class="card" style="width: 15rem; height: 34em; margin-bottom: 0.5em">
 				                <!--Card image-->
 				                <div style="height: 18em">
-				                  	<a href="detailProduct.php?proid=<?php echo $key['proid'] ?>">
+				                  	<a href="detailHeroku.php?proid=<?php echo $key['proid'] ?>">
 				                    	<img src="<?php echo $key['proimage'] ?>" class="card-img-top" height="280px" width="280px"  alt="">
 				                  	</a>
 				                </div>
