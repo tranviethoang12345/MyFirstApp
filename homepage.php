@@ -42,7 +42,7 @@
 			            
 		          	?>
 			         <div class="row">
-			         	<?phpif (pg_num_rows($result) > 0) {
+			         	<?php if (pg_num_rows($result) > 0) {
 			            // output data of each row
 			            while($key = pg_fetch_assoc($result)) {
 			            	$proid = $key['proid'];
