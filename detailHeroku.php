@@ -19,8 +19,8 @@
 	<div class="container">
 		<h2 class="h2-responsive">Details<h2>
       	<?php 
-				include 'dbconnector.php';
-				$proid =$_GET['proid'];
+			include 'dbconnector.php';
+			$proid =$_GET['proid'];
             $sql = "SELECT * FROM product WHERE proid = '$proid'";
             $result = pg_query($connection,$sql);
             if (pg_num_rows($result) > 0) {
@@ -35,34 +35,34 @@
        	?>
 	          
 
-			            <!--Card-->
-			            <div class="card">
-			                <!--Card image-->
-			                <div style="">
-			                  	<a href="#">
-			                    	<img src="<?php echo $key['proimage'] ?>" height="680px" width="730px" alt="">
-			                 	</a>
-			                </div>
-			                <!--/.Card image-->
+	            <!--Card-->
+	            <div class="card">
+	                <!--Card image-->
+	                <div style="">
+	                  	<a href="#">
+	                    	<img src="<?php echo $key['proimage'] ?>" height="680px" width="730px" alt="">
+	                 	</a>
+	                </div>
+	                <!--/.Card image-->
 
-			                <!--Card content-->
-			                <div class="card-body">
-			                  <!--Title-->
-			                  <h4 class="card-title" style="height: 2.2em"><?php echo $key['proname'] ?></h4>
-			                  <!--Text-->
-			                  <p class="card-text" style="height: 4em"><?php echo $key['prodescribe'] ?></p>
-			                </div>
+	                <!--Card content-->
+	                <div class="card-body">
+	                  <!--Title-->
+	                  <h4 class="card-title" style="height: 2.2em"><?php echo $key['proname'] ?></h4>
+	                  <!--Text-->
+	                  <p class="card-text" style="height: 4em"><?php echo $key['prodescribe'] ?></p>
+	                </div>
 
-			                <div class="card-body">
-				                <a href="#" class="btn btn-primary card-link">Buy now for <strong>$<?php echo $key['proprice'] ?></strong></a>
-			                </div>
-			                <!--/.Card content-->
+	                <div class="card-body">
+		                <a href="#" class="btn btn-primary card-link">Buy now for <strong>$<?php echo $key['proprice'] ?></strong></a>
+	                </div>
+	                <!--/.Card content-->
 
-             		 	</div>
-              			<!--/.Card-->
-            		</div>
-            		<?php }} ?>
-          		</div>
+     		 	</div>
+      			<!--/.Card-->
+    		</div>
+    		<?php }} ?>
+  		</div>
 	</main>
 
 	<footer class="bg-secondary text-white text-center" style="height: 100px;">
