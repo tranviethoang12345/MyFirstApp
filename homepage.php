@@ -38,8 +38,7 @@
 			        <?php
 			        include 'dbconnector.php';
 			            $sql = "SELECT * FROM product where catId = '5' ";
-			            // $result = pg_query($connection,$sql);
-			            $rows = $conn -> runQuery($connection, $sql);
+			            $result = pg_query($connection,$sql);
 			            // if (pg_num_rows($result) > 0) {
 			            // // output data of each row
 			            // while($rows = pg_fetch_assoc($result)) {
@@ -50,7 +49,7 @@
 			            //   	$proprice = $rows['proprice'];
 		          	?>
 			         <div class="row">
-			         	<?php foreach ($rows as $key) { ?>
+			         	<?php foreach ($result as $key) { ?>
 		        		<div class="col-lg-4">
 		              		<div class="card" style="width: 15rem; height: 34em; margin-bottom: 0.5em">
 				                <div style="height: 18em">
@@ -70,9 +69,6 @@
 		        		</div>
 		        		<?php } ?>
 			        </div>
-
-			        <?php }} ?>
-
 			        <!--/.Second row-->
 		        </div>
 			</div>
