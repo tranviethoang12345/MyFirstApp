@@ -21,7 +21,8 @@
 			<!--Sidebar-->
 	       <?php require_once("sidebar.php") ?>
 	        <!--/.Sidebar-->
-		
+		</div>
+
 			<!--Main column-->
 			<!--First row-->
 
@@ -73,8 +74,6 @@
 		        </div>
 			</div>
 			<!--/.Main column-->
-			</div>
-
 		</div>
 	</main>
 
