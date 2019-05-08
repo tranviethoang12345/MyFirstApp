@@ -8,8 +8,8 @@
             if (pg_num_rows($result) > 0) {
             // output data of each row
             while($key = pg_fetch_assoc($result)) {
-                $catId = $key['catId'];
-                $catName = $key['catName'];
+                $catid = $key['catid'];
+                $catname = $key['catname'];
         ?>
         <div class="list-group">
                 <a href="catName.php?catId=<?= $key['catid']?>" class="list-group-item bg-secondary text-white"><?php echo $key['catname'] ?></a>
