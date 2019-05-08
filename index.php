@@ -17,10 +17,8 @@
 	<main>
 	<!-- Main Layout -->
 	<div class="container">
-		<div class="row">
-
-	        <div class="col-lg-8">
-				<div class="col-lg-12">
+		<div class="row">				
+			<div class="col-lg-12">
 					<!--First row-->
 					<h2 class="h2-responsive">What's new?</h2>
 			         
@@ -68,12 +66,10 @@
 			        	<?php }} ?>
 			        	<!--/column-->
 			        </div>
-			        <!--/.Second row-->
 		        </div>
 			</div>
 		</div>
-			<!--/.Main column-->
-		</div>
+
 	</main>
 
 	<footer class="bg-secondary text-white text-center" style="height: 100px;">
