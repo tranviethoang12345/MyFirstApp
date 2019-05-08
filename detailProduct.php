@@ -34,11 +34,7 @@
  						$proid =$_GET['proid'];
 			            $sql = "SELECT * FROM product WHERE proid = '$proid'";
 			            $result = pg_query($connection,$sql);
-
-		           	?>
-			          
-			        <div class="row">
-			        	<<?php 			            if (pg_num_rows($result) > 0) {
+			            if (pg_num_rows($result) > 0) {
 			            // output data of each row
 			            while($key = pg_fetch_assoc($result)) {
 			            	$proid = $key['proid'];
@@ -46,7 +42,10 @@
 			              	$proname = $key['proname'];
 			              	$prodes = $key['prodes'];
 			              	$proprice = $key['proprice'];
-			              	$prodescribe = $key['prodescribe']; ?>
+			              	$prodescribe = $key['prodescribe'];
+		           	?>
+			          
+			        <div class="row">
 			            <div class="col-lg-12">
 			            <!--Card-->
 			            <div class="card">
