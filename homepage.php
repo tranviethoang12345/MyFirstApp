@@ -28,7 +28,7 @@
 
             
 	        <div class="col-lg-8">
-				<div class="col-lg-12">
+
 					<!--First row-->
 					<h2 class="h2-responsive">What's new?</h2>
 			
@@ -69,7 +69,7 @@
 		        		</div>
 			        
 			        <?php }} ?>
-</div>
+
 
 			        <!--/.Second row-->
 		        </div>
