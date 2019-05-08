@@ -38,7 +38,8 @@
 			        <?php
 			        include 'dbconnector.php';
 			            $sql = "SELECT * FROM product where catId = '5' ";
-			            $rows = $conn -> runQuery($sql);
+			            // $result = pg_query($connection,$sql);
+			            $rows = $conn -> runQuery($connection, $sql);
 			            // if (pg_num_rows($result) > 0) {
 			            // // output data of each row
 			            // while($rows = pg_fetch_assoc($result)) {
