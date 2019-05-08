@@ -21,14 +21,12 @@
 			<!--Sidebar-->
 	       <?php require_once("sidebar.php") ?>
 	        <!--/.Sidebar-->
-			</div>
+		</div>
 
 			<!--Main column-->
 			<!--First row-->
 
-            <div class="row">
-            	<div class="col-lg-4">
-            	</div>
+            
 	        <div class="col-lg-8">
 				<div class="col-lg-12">
 					<!--First row-->
@@ -39,7 +37,7 @@
               		<!--Second row-->
 			        <?php
 			        include 'dbconnector.php';
-			            $sql = "SELECT * FROM product where catId = '5' ";
+			            $sql = "SELECT proid, proimage, proname, prodes,  proprice FROM product ";
 			            $result = pg_query($connection,$sql);
 			            if (pg_num_rows($result) > 0) {
 			            // output data of each row
@@ -76,7 +74,6 @@
 		        </div>
 			</div>
 			<!--/.Main column-->
-			</div>
 		</div>
 	</main>
 

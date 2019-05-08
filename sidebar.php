@@ -4,14 +4,16 @@
     <?php 
         require_once('./dbconnector.php');
         $sql = "SELECT * FROM category";
-        $result = pg_query($connection,$sql);
-        if (pg_num_rows($result) > 0) {
-        // output data of each row
-        while($key = pg_fetch_assoc($result)) {
-            $catid = $key['catid'];
-            $catname = $key['catname'];
+        // $result = pg_query($connection,$sql);
+        // if (pg_num_rows($result) > 0) {
+        // // output data of each row
+        // while($key = pg_fetch_assoc($result)) {
+        //     $catid = $key['catid'];
+        //     $catname = $key['catname'];
+        $rows = $conn ->runQuery($connection,$sql);
     ?>
     <div class="list-group">
+        <?php foreach ($rows as $key) { ?>
             <a href="catName.php?catid=<?= $key['catid']?>" class="list-group-item bg-secondary text-white"><?php echo $key['catname'] ?></a>
         <?php }} ?>
     </div>
