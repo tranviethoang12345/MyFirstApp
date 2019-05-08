@@ -2,14 +2,14 @@
 	<!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-secondary fixed-top">
       	<div class="container">
-	        <a class="navbar-brand text-white" href="homepage.php">
+	        <a class="navbar-brand text-white" href="index.php">
 	          <strong>Viet Hoang Max</strong>
 	        </a>
 
 	        <div class="collapse navbar-collapse bg-secondary" id="navbarNav">
 		        <ul class="nav nav-pills card-header-pills">
 		            <li class="nav-item">
-		              	<a class="nav-link active" href="homepage.php">Home <span class="sr-only">(current)</span></a>
+		              	<a class="nav-link active" href="index.php">Home <span class="sr-only">(current)</span></a>
 		            </li>
 
 		            <li class="nav-item">
