@@ -18,15 +18,7 @@
 	<!-- Main Layout -->
 	<div class="container">
 		<div class="row">
-			<!--Sidebar-->
-	        
-	        <!--/.Sidebar-->
 
-
-			<!--Main column-->
-			<!--First row-->
-
-            
 	        <div class="col-lg-8">
 				<div class="col-lg-12">
 					<!--First row-->
