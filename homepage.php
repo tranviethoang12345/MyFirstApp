@@ -37,19 +37,19 @@
               		<!--Second row-->
 			        <?php
 			        include 'dbconnector.php';
-			            $sql = "SELECT * FROM product where catId = '5' ";
+			            $sql = "SELECT proid, proimage, proname, prodes,  proprice FROM product ";
 			            $result = pg_query($connection,$sql);
-			            // if (pg_num_rows($result) > 0) {
-			            // // output data of each row
-			            // while($rows = pg_fetch_assoc($result)) {
-			            // 	$proid = $rows['proid'];
-			            //   	$proimage = $rows['proimage'];
-			            //   	$proname = $rows['proname'];
-			            //   	$prodes = $rows['prodes'];
-			            //   	$proprice = $rows['proprice'];
+			            if (pg_num_rows($result) > 0) {
+			            // output data of each row
+			            while($key = pg_fetch_assoc($result)) {
+			            	$proid = $key['proid'];
+			              	$proimage = $key['proimage'];
+			              	$proname = $key['proname'];
+			              	$prodes = $key['prodes'];
+			              	$proprice = $key['proprice'];
 		          	?>
 			         <div class="row">
-			         	<?php foreach ($result as $key) { ?>
+			         	<?php foreach ($key) { ?>
 		        		<div class="col-lg-4">
 		              		<div class="card" style="width: 15rem; height: 34em; margin-bottom: 0.5em">
 				                <div style="height: 18em">
@@ -67,8 +67,10 @@
 			               	 	</div>
 			              	</div>
 		        		</div>
-		        		<?php } ?>
-			        </div>
+			        
+			        <?php }} ?>
+</div>
+
 			        <!--/.Second row-->
 		        </div>
 			</div>
