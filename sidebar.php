@@ -12,8 +12,8 @@
                         while($key = pg_fetch_assoc($result)) {
                             $catid = $key['catid'];
                             $catname = $key['catname']; { ?>
-            <a href="catDetail.php?catId=<?= $key['catid']?>" class="list-group-item bg-secondary text-white"><?php echo $key['catname'] ?></a>
-        <?php } ?>
+            <a href="catDetail.php?catid=<?= $key['catid']?>" class="list-group-item bg-secondary text-white"><?php echo $key['catname'] ?></a>
+        <?php }} ?>
     </div>
 
     <div style="padding-top: 3rem">
