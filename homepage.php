@@ -21,12 +21,14 @@
 			<!--Sidebar-->
 	       <?php require_once("sidebar.php") ?>
 	        <!--/.Sidebar-->
-			
+			</div>
 
 			<!--Main column-->
 			<!--First row-->
 
-            
+            <div class="row">
+            	<div class="col-lg-4">
+            	</div>
 	        <div class="col-lg-8">
 				<div class="col-lg-12">
 					<!--First row-->
@@ -73,8 +75,8 @@
 			        <!--/.Second row-->
 		        </div>
 			</div>
-			</div>
 			<!--/.Main column-->
+			</div>
 		</div>
 	</main>
 
