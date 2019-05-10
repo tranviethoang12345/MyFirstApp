@@ -24,8 +24,8 @@
 			         
 			        <div class="row">
 			            <!--columnn-->
-			            <?php
-			        include 'dbconnector.php';
+			        <?php
+			        	include 'dbconnector.php';
 			            $sql = "SELECT * FROM product ";
 			            $result = pg_query($connection,$sql);
 			            if (pg_num_rows($result) > 0) {
